@@ -1,0 +1,14 @@
+<div class="row">
+    <h1><%=@title[0].title%></h1>
+
+    <%=@title[0].body%>
+
+
+    <%= form_for(Answer.new) do |f| %>
+      <%= f.label :body %>
+      <%= f.text_area :body %>
+      <br>
+      <%= f.submit "Submit Answer" %>
+
+    <%-end-%>
+</div>

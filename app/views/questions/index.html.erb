@@ -1,0 +1,12 @@
+
+<div class="row">
+    <h1>Ask a Question</h1>
+
+    <% @questions.reverse.each do |id, question, time, altered, body| %>
+    <li><%= link_to question, question_path(id) %></li>
+    <%end %>
+    <br>
+    <a href="/questions/new">Ask a Question!</a>
+
+
+</div>
