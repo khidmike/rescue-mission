@@ -34,10 +34,10 @@ class QuestionsController < ApplicationController
   end
 
   def delete
-
   end
 
   def show
-    @title = Question.all.where(id: params[:id].first)
+    @question = Question.all.where(id: params[:id]).first
+    @answer = Answer.new
   end
 end

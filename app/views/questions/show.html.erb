@@ -1,12 +1,14 @@
 <div class="row">
-    <h1><%=@title[0].title%></h1>
+    <h1><%=@question.title%></h1>
 
-    <%=@title[0].body%>
+    <%=@question.body%>
 
-
-    <%= form_for(Answer.new) do |f| %>
-      <%= f.label :body %>
-      <%= f.text_area :body %>
+    <br>
+    <br>
+    <%= form_for [@question, @answer] do |f| %>
+      <%= f.label "Answer" %>
+      <%= f.text_field :body %>
+      <br>
       <br>
       <%= f.submit "Submit Answer" %>
 
